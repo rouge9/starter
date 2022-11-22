@@ -36,48 +36,13 @@
   </head>
   <body>
     <!-- N A V B A R -->
-    <nav class="navbar navbar-default navbar-expand-lg fixed-top custom-navbar">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="icon ion-md-menu"></span>
-      </button>
-      <!-- <img
-        src="images/logo.png"
-        class="img-fluid nav-logo-mobile"
-        alt="Company Logo"
-      /> -->
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <div class="container">
-          <!-- <img
-            src="images/logo.png"
-            class="img-fluid nav-logo-desktop"
-            alt="Company Logo"
-          /> -->
-          <ul
-            class="navbar-nav ml-auto nav-right"
-            data-easing="easeInOutExpo"
-            data-speed="1250"
-            data-offset="65"
-          >
-            <li class="nav-item nav-custom-link">
-              <a class="nav-link" href="#home"
-                >Home <i class="icon ion-ios-arrow-forward icon-mobile"></i
-              ></a>
-            </li>
-            <li class="nav-item nav-custom-link">
-              <a class="nav-link" href="#About"
-                >About <i class="icon ion-ios-arrow-forward icon-mobile"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
+    <nav class="navBar">
+      <div class="navdiv">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
     <!-- E N D  N A V B A R -->
@@ -105,7 +70,7 @@
     </section>
 
     <!-- About -->
-    <section id="About">
+    <section id="about">
       <div class="wave">
         <svg
           data-name="Layer 1"
@@ -122,17 +87,18 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="section-heading">About</h1>
+            <h1 class="section-heading box">About</h1>
+            <!-- <img src="assets/animation/about.gif" alt="about" /> -->
           </div>
         </div>
         <div class="row">
           <div class="col-md-6">
-            <img
+            <!-- <img
               src="images/about.jpg"
               class="img-fluid"
               alt="About image"
               data-aos="fade-right"
-            />
+            /> -->
           </div>
           <div class="col-md-6">
             <h2 class="section-subheading">Lorem ipsum dolor sit amet</h2>
@@ -162,5 +128,143 @@
         </svg>
       </div>
     </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="wave3">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="section-heading">Skills</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Front End</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Back End</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Database</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <!-- <section id="projects">
+      <div class="procontainer">
+          <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <i class="fab fa-windows"></i>
+            <h3>Windows</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
+              repudiandae, explicabo voluptate et hic cum ratione a.
+            </p>
+            <a href="#" type="button">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <i class="fab fa-android"></i>
+            <h3>Android</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
+              repudiandae, explicabo voluptate et hic cum ratione a.
+            </p>
+            <a href="#" type="button">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <i class="fab fa-apple"></i>
+            <h3>Apple</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
+              repudiandae, explicabo voluptate et hic cum ratione a.
+            </p>
+            <a href="#" type="button">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Contact -->
+    <section id="contact">
+      <h1>I can help.</h1>
+      <h2>i'm currently available for hire.</h2>
+      <p>
+        If you have a project that you want to get started, think you need my
+        help with something or just fancy saying hey, then get in touch.
+      </p>
+      <button class="e-btn">
+        <a href="mailto:robelged1992@gmail.com">Email Me</a>
+      </button>
+    </section>
+    <hr />
+    <footer id="footer">
+      <a href="https://github.com/rouge9" target="_blank">Github</a> |
+      <a
+        href="https://www.linkedin.com/in/robel-gedamu-569238229/"
+        target="_blank"
+        >Linkdin</a
+      >
+      <p>©2022 <span>Robel Gedamu</span> All rights reserved.</p>
+    </footer>
   </body>
 </html>
