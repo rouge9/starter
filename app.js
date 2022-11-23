@@ -39,9 +39,10 @@ var typed = new Typed(typedtext, {
     "ui/ux Designer",
     "Freelancer",
     "Data Scientist",
+    "Automation Engineer",
     "Full Stack Developer",
   ],
   typeSpeed: 130,
-  backSpeed: 200,
+  backSpeed: 100,
   loop: true,
 });
