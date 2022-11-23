@@ -19,11 +19,8 @@
     <!-- Custom Css -->
     <link rel="stylesheet" href="style.css" type="text/css" />
 
-    <!-- Ionic icons -->
-    <link
-      href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css"
-      rel="stylesheet"
-    />
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Google Fonts -->
@@ -36,13 +33,13 @@
   </head>
   <body>
     <!-- N A V B A R -->
-    <nav class="navBar">
-      <div class="navdiv">
-        <a href="#home">Home</a>
+    <nav>
+      <div id="navdiv">
+        <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="www.google.com">Projects</a>
       </div>
     </nav>
     <!-- E N D  N A V B A R -->
@@ -52,11 +49,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7 content-box hero-content">
-            <span>Lorem Ipsum</span>
-            <h1>
-              Lorem ipsum dolor sit amet <b>consectetur adipiscing elit</b>
-            </h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+            <h1 class="title"><span>I'm Robel</span></h1>
+            <p class="sub-title">
+              just a <span class="typedtext"></span> trying to make a difference
+            </p>
           </div>
           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
             <img
@@ -87,7 +83,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="section-heading box">About</h1>
+            <h1 class="section-heading box"><b>About</b></h1>
           </div>
         </div>
         <div class="row">
@@ -140,11 +136,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="section-heading">Skills</h1>
+            <h1 class="section-heading"><b>Skills</b></h1>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 hidden">
             <div class="progress blue">
               <span class="progress-left">
                 <span class="progress-bar"></span>
@@ -156,7 +152,7 @@
             </div>
             <h3 class="barTitle">HTML & CSS</h3>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-5 col-sm-6 hidden">
             <div class="progress yellow">
               <span class="progress-left">
                 <span class="progress-bar"></span>
@@ -168,7 +164,7 @@
             </div>
             <h3 class="barTitle">JavaScript</h3>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-4 col-sm-6 hidden">
             <div class="progress green">
               <span class="progress-left">
                 <span class="progress-bar"></span>
@@ -180,7 +176,7 @@
             </div>
             <h3 class="barTitle">React</h3>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-7 col-sm-6 hidden">
             <div class="progress pink">
               <span class="progress-left">
                 <span class="progress-bar"></span>
@@ -193,8 +189,8 @@
             <h3 class="barTitle">TypeScript</h3>
           </div>
 
-          <div class="col-md-3 col-sm-6">
-            <div class="progress green">
+          <div class="col-md-4 col-sm-6 hidden">
+            <div class="progress lightgreen">
               <span class="progress-left">
                 <span class="progress-bar"></span>
               </span>
@@ -203,67 +199,11 @@
               </span>
               <div class="progress-value">85%</div>
             </div>
-            <h3 class="barTitle">Python</h3>
+            <h3 class="barTitle">React</h3>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Projects -->
-    <!-- <section id="projects">
-      <div class="procontainer">
-          <div class="card">
-        <div class="face face1">
-          <div class="content">
-            <i class="fab fa-windows"></i>
-            <h3>Windows</h3>
-          </div>
-        </div>
-        <div class="face face2">
-          <div class="content">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
-              repudiandae, explicabo voluptate et hic cum ratione a.
-            </p>
-            <a href="#" type="button">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="face face1">
-          <div class="content">
-            <i class="fab fa-android"></i>
-            <h3>Android</h3>
-          </div>
-        </div>
-        <div class="face face2">
-          <div class="content">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
-              repudiandae, explicabo voluptate et hic cum ratione a.
-            </p>
-            <a href="#" type="button">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="face face1">
-          <div class="content">
-            <i class="fab fa-apple"></i>
-            <h3>Apple</h3>
-          </div>
-        </div>
-        <div class="face face2">
-          <div class="content">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
-              repudiandae, explicabo voluptate et hic cum ratione a.
-            </p>
-            <a href="#" type="button">Read More</a>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- Contact -->
     <section id="contact">
@@ -287,5 +227,6 @@
       >
       <p>©2022 <span>Robel Gedamu</span> All rights reserved.</p>
     </footer>
+    <script dif src="app.js"></script>
   </body>
 </html>

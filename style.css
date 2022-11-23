@@ -12,6 +12,7 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: #63d471;
   border-radius: 10px;
+  width: 70px;
 }
 
 h1 {
@@ -44,7 +45,6 @@ p {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.05em;
-  color: #53627c;
 }
 
 ul {
@@ -97,7 +97,7 @@ li {
 /* ==============================================
    2. Navbar 
 ===============================================*/
-.navBar {
+nav {
   box-sizing: border-box;
   margin: 0px 16px;
   min-width: 0px;
@@ -107,7 +107,7 @@ li {
   text-align: center;
 }
 
-.navdiv {
+#navdiv {
   box-sizing: border-box;
   margin: 0px;
   min-width: 0px;
@@ -116,10 +116,10 @@ li {
   padding: 4px;
   backdrop-filter: saturate(180%) blur(30px);
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-.navdiv a {
+#navdiv a {
   box-sizing: border-box;
   margin: 0px;
   min-width: 0px;
@@ -129,14 +129,41 @@ li {
   font-weight: 700;
   display: block;
   color: rgb(0, 0, 0);
-  padding: 8px 13px;
+  padding: 8px 17px;
   font-size: 18px;
+}
+
+#navdiv a.active {
+  font-size: 18px;
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out 0s;
+  font-weight: 700;
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 8px 17px;
+  background-color: #4e7d55;
+  border-radius: 24px;
+  color: #dcecf0;
+}
+
+#navdiv a:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+  filter: brightness(140%);
 }
 
 /* Home page */
 .title {
   font-family: "Sacramento", cursive;
   margin: 5;
+  text-align: center;
+}
+.sub-title {
+  /* font-family: "Ubuntu", sans-serif; */
+  margin-top: 0;
   text-align: center;
 }
 .p-anim {
@@ -152,20 +179,21 @@ li {
 }
 
 #home h1 {
-  font-size: 50px;
+  font-size: 2.3rem;
   font-weight: 300;
+  /* margin: 30px 40px; */
+  padding: 60px;
 }
-
 #home p {
-  font-size: 24px;
+  font-size: 25px;
   font-weight: 300;
-  color: #4e7d55;
+  color: #305035;
   margin-bottom: 0px;
   padding: 0px;
 }
 
 #home span {
-  font-weight: 400;
+  font-weight: 600;
   color: #0f3f49;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -244,7 +272,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 400px;
+  min-height: 300px;
   padding-top: 100px;
 }
 
@@ -252,6 +280,7 @@ li {
   font-size: 50px;
   font-weight: 300;
   color: #63d471;
+  margin-bottom: 100px;
 }
 
 #about h2 {
@@ -277,7 +306,7 @@ li {
   flex-direction: column;
   align-items: center;
   min-height: 400px;
-  padding-top: 100px;
+  padding-top: 50px;
   margin: 0px;
 }
 
@@ -285,6 +314,7 @@ li {
   font-size: 50px;
   font-weight: 300;
   color: #63d471;
+  margin-bottom: 100px;
 }
 
 #skills h3 {
@@ -292,105 +322,6 @@ li {
   font-weight: 300;
   color: #63d471;
   text-align: center;
-}
-
-/* Projects */
-#projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 400px;
-  padding-top: 100px;
-  justify-content: center;
-}
-.procontainer {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.card {
-  position: relative;
-  background-color: #63d471;
-  border: none;
-}
-.face {
-  width: 300px;
-  height: 200px;
-  transition: 0.4s;
-}
-.face1 {
-  position: relative;
-  background: #0f3f49;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  z-index: 1;
-  transform: translateY(100px);
-}
-.card:hover .face.face1 {
-  transform: translateY(0);
-  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f,
-    inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
-    0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
-}
-.face.face1 .content {
-  opacity: 0.2;
-  transition: 0.5s;
-  text-align: center;
-}
-.card:hover .face.face1 .content {
-  opacity: 1;
-}
-.face.face1 .content i {
-  font-size: 3em;
-  color: white;
-  display: inline-block;
-}
-.face.face1 .content h3 {
-  font-size: 1em;
-  color: white;
-  text-align: center;
-}
-.face.face1 .content a {
-  transition: 0.5s;
-}
-.face.face2 {
-  position: relative;
-  background: whitesmoke;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  transform: translateY(-100px);
-}
-.card:hover .face.face2 {
-  transform: translateY(0);
-}
-p,
-.procontainer a {
-  font-size: 10pt;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-.procontainer a {
-  text-decoration: none;
-  color: black;
-  box-sizing: border-box;
-  outline: 1px dashed #333;
-  padding: 10px;
-  margin: 15px 0 0;
-  display: inline-block;
-}
-.procontainer a:hover {
-  background: #333;
-  color: whitesmoke;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* contact section styles */
@@ -404,6 +335,7 @@ p,
   margin: 0.3em auto 0;
   font-size: 1.1rem;
   margin-bottom: 2.5em;
+  color: #0f3f49;
 }
 
 #contact h1 {
@@ -513,7 +445,7 @@ footer a:hover {
   font-size: 24px;
   color: rgb(250, 245, 245);
   text-align: center;
-  position: absolute;
+  position: relative;
 }
 .progress.blue .progress-bar {
   border-color: #26abfd;
@@ -536,7 +468,14 @@ footer a:hover {
 .progress.green .progress-bar {
   border-color: #1abc9c;
 }
+.progress.lightgreen .progress-bar {
+  border-color: #63d471;
+}
 .progress.green .progress-left .progress-bar {
+  animation: loading-5 1.2s linear forwards 1.8s;
+}
+
+.progress.lightgreen .progress-left .progress-bar {
   animation: loading-5 1.2s linear forwards 1.8s;
 }
 @keyframes loading-1 {
@@ -591,8 +530,38 @@ footer a:hover {
 }
 @media only screen and (max-width: 990px) {
   .progress {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
 /* end of circular bar */
+
+/* add smooth scroll */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* end  */
+
+/* skill animation */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+/* end of skill animation */
