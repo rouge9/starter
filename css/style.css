@@ -16,6 +16,20 @@ body::-webkit-scrollbar-thumb {
   width: 20px;
 }
 
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
 h1 {
   font-size: 2.3rem;
 }
@@ -76,11 +90,11 @@ section {
   margin-bottom: 0px;
 }
 
-.divider {
+/* .divider {
   padding: 2rem 0 0;
   margin: 2rem 0 0;
   border-top: 1px solid #3c3f45;
-}
+} */
 
 .divider-light {
   padding: 2rem 0 0;
@@ -155,6 +169,48 @@ nav {
   transform: scale(1.1);
   filter: brightness(140%);
 }
+
+.menu-icon {
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.mobile-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #0f3f49;
+  width: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  transition: 0.5s;
+}
+.mobile-menu ul {
+  list-style: none;
+  padding-left: 5%;
+  margin-top: 5em;
+}
+
+.mobile-menu li {
+  padding-top: 1.2em;
+  font-size: larger;
+  font-weight: bold;
+}
+.mobile-menu a {
+  color: #63d471;
+  text-decoration: none;
+}
+.close {
+  position: absolute;
+  width: 25%;
+  right: 1em;
+  top: 1.3em;
+  cursor: pointer;
+}
+
+/* end of navbar */
 
 /* Home page */
 .title {
@@ -296,6 +352,7 @@ nav {
   color: #4e7d55;
   margin-bottom: 0px;
   padding: 0px;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* end of about */
@@ -340,6 +397,8 @@ nav {
   font-size: 1.1rem;
   margin-bottom: 2.5em;
   color: #0f3f49;
+  font-family: "Open Sans", sans-serif;
+  line-height: 2;
 }
 
 #contact h1 {
@@ -555,9 +614,26 @@ footer a:hover {
   transition: all 1s;
 }
 
-@media (prefers-reduced-motion) {
+@media only screen and (max-width: 900px) {
   .hidden {
-    transition: none;
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+  }
+  .nav {
+    display: none;
+  }
+  #navdiv {
+    display: none;
+  }
+  .mobile-menu {
+    text-align: start;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .close {
+    width: 15%;
   }
 }
 
@@ -567,3 +643,5 @@ footer a:hover {
   transform: translateX(0);
 }
 /* end of skill animation */
+
+/* @ media css for containers */

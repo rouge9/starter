@@ -4,7 +4,7 @@ let navbarLinks = document.querySelectorAll("#navdiv a");
 window.addEventListener("scroll", (e) => {
   let scrollPos = window.scrollY;
   navbarLinks.forEach((link) => {
-    let section = document.querySelector(link.hash);
+    let section = document.querySelector(link);
     if (
       scrollPos + 150 > section.offsetTop &&
       scrollPos + 150 < section.offsetTop + section.offsetHeight
@@ -45,4 +45,32 @@ var typed = new Typed(typedtext, {
   typeSpeed: 130,
   backSpeed: 100,
   loop: true,
+});
+
+const toggle = document.querySelector("#toggle");
+
+const mobileMenu = document.querySelector(".mobile-menu");
+
+const closeBtn = document.querySelector(".close");
+const navLinks = document.querySelectorAll(".mobile-menu .nav-link");
+toggle.onclick = function () {
+  mobileMenu.style.setProperty("width", "50%");
+};
+closeBtn.onclick = function () {
+  mobileMenu.style.setProperty("width", "0%");
+};
+
+navLinks.forEach((navLink) => {
+  navLink.onclick = function () {
+    mobileMenu.style.setProperty("width", "0%");
+  };
+});
+const scrollUpBtn = document.querySelector(".scroll-up");
+window.addEventListener("scroll", () => {
+  let currentScroll = window.pageYOffset;
+  if (currentScroll > 50) {
+    scrollUpBtn.style.setProperty("display", "block");
+  } else {
+    scrollUpBtn.style.setProperty("display", "none");
+  }
 });
