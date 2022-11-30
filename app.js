@@ -1,10 +1,10 @@
 let navbar = document.getElementById("navdiv");
 let navbarLinks = document.querySelectorAll("#navdiv a");
 
-window.addEventListener("scroll", (e) => {
+window.addEventListener("scroll", () => {
   let scrollPos = window.scrollY;
   navbarLinks.forEach((link) => {
-    let section = document.querySelector(link);
+    let section = document.querySelector(link.hash);
     if (
       scrollPos + 150 > section.offsetTop &&
       scrollPos + 150 < section.offsetTop + section.offsetHeight
