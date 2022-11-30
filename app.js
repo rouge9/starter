@@ -65,12 +65,12 @@ navLinks.forEach((navLink) => {
     mobileMenu.style.setProperty("width", "0%");
   };
 });
-const scrollUpBtn = document.querySelector(".scroll-up");
-window.addEventListener("scroll", () => {
-  let currentScroll = window.pageYOffset;
-  if (currentScroll > 50) {
-    scrollUpBtn.style.setProperty("display", "block");
-  } else {
-    scrollUpBtn.style.setProperty("display", "none");
-  }
-});
+// const scrollUpBtn = document.querySelector(".scroll-up");
+// window.addEventListener("scroll", () => {
+//   let currentScroll = window.pageYOffset;
+//   if (currentScroll > 50) {
+//     scrollUpBtn.style.setProperty("display", "block");
+//   } else {
+//     scrollUpBtn.style.setProperty("display", "none");
+//   }
+// });
